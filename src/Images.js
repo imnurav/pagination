@@ -29,18 +29,19 @@ export default function Images(props) {
     <div className="images">
         {currentItems.map(image=>{
             return(<div>
-                <img className="pic" src={image.url} alt={image.title} />
+                <img className="img-fluid" src={image.url} alt={image.title} />
             </div>)
         })}
     </div>
       {/* <Items currentItems={currentItems} /> */}
       <ReactPaginate
+      className="pagination"
         breakLabel="..."
-        nextLabel="Next >"
+        nextLabel=">"
         onPageChange={handlePageClick}
         pageRangeDisplayed={3}
         pageCount={pageCount}
-        previousLabel="< Prev."
+        previousLabel="<"
         renderOnZeroPageCount={null}
         containerClassName="pagination"
         pageLinkClassName="page-num"
